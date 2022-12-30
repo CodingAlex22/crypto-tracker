@@ -2,6 +2,7 @@ import React from 'react'
 import CoinItem from './CoinItem'
 import Coin from '../routes/Coin'
 import Carousel from './Carousel'
+import CarouselExchange from './CarouselExchange'
 import {Link} from 'react-router-dom'
 import './Coins.css'
 
@@ -11,6 +12,9 @@ const Coins = (props) => {
         <div>
             <div className="carosel">
                 <Carousel />
+            </div>
+            <div className="carosel-exchange">
+                <CarouselExchange />
             </div>
             <div className="heading">
                 <p>#</p>

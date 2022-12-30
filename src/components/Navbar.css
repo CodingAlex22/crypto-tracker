@@ -4,6 +4,18 @@
     align-items: center;
 }
 
+.navbar img{
+    min-width: 20%;
+    height: 90px;
+}
+
+@media screen and (max-width: 500px){
+    .navbar img{
+        max-width: 70%;
+        height: 50px;
+    }
+}
+
 .icon{
     font-size: 2rem;
     color: #6900ff;

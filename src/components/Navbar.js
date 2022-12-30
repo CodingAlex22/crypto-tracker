@@ -8,8 +8,7 @@ const Navbar = () => {
     <Link to='/'> 
     <div>
         <div className='navbar'>
-            <FaCoins className='icon'/>
-            <h1> Coin <span className='purple'>Search</span></h1>
+            <img src ="https://i.ibb.co/sJtWfw2/xcoin-logo44.png"></img>
         </div>
     </div>
     </Link>

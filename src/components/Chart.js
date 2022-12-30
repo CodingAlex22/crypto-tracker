@@ -6,7 +6,8 @@ import {useParams} from 'react-router-dom'
 function Chart() {
   const ref = React.useRef();
   const params = useParams()
-
+  const resizeObserver = React.useRef();
+  const chart = React.useRef();
  
   const getData = async () => {
     const resp = await fetch(`https://busy-tan-pike-slip.cyclic.app/${params.coinId}/max`);
@@ -17,7 +18,7 @@ function Chart() {
   useEffect(() => {
     const renderChart = async () =>{
 
-        var chart = createChart(ref.current, {width: 710,
+        chart.current = createChart(ref.current, {width: 710,
           height: 400,
           layout: {
             backgroundColor: '#141823',
@@ -58,7 +59,7 @@ function Chart() {
         }
 
         
-        const areaSeries = chart.addAreaSeries({
+        const areaSeries = chart.current.addAreaSeries({
           priceFormat: {
             type: 'price',
             precision: `${precision_number}`,
@@ -74,13 +75,9 @@ function Chart() {
         areaSeries.setData(klinedata);
         console.log(klinedata);
 
-        const chartContainer = document.getElementById('charts');
+  
         
-        new ResizeObserver(entries => {
-        if (entries.length === 0 || entries[0].target !== chartContainer) { return; }
-        const newRect = entries[0].contentRect;
-        chart.applyOptions({ height: newRect.height, width: newRect.width });
-      }).observe(chartContainer);
+        
         return () => {
             chart.remove()
           }
@@ -97,6 +94,20 @@ function Chart() {
 
    
 
+  }, []);
+
+  useEffect(() => {
+    resizeObserver.current = new ResizeObserver(entries => {
+      const { width, height } = entries[0].contentRect;
+      chart.current.applyOptions({ width, height });
+      setTimeout(() => {
+        chart.timeScale().fitContent();
+      }, 0);
+    });
+
+    resizeObserver.current.observe(ref.current);
+
+    return () => resizeObserver.current.disconnect();
   }, []);
 
   return (

@@ -19,6 +19,11 @@
     margin-left: -4rem;
 }
 
+element.style{
+    width: 44em;
+    height: 20em;
+}
+
 .coin-row{
     display: flex;
     justify-content: space-between;

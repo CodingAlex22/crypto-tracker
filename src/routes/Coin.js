@@ -117,7 +117,26 @@ const Coin = () => {
                     </div>
                     <div className='row'>
                         <h4>24 Hour High</h4>
-                        {coin.market_data?.high_24h ? <p>${coin.market_data.high_24h.usd.toLocaleString()}</p> : null}                            </div>
+                        {coin.market_data?.high_24h ? <p>${coin.market_data.high_24h.usd.toLocaleString()}</p> : null}                            
+                    </div>
+                    <div className='row'>
+                        <h4>Sentiment upvote percentage</h4>
+                        {coin.sentiment_votes_up_percentage ? <p>{coin.sentiment_votes_up_percentage.toLocaleString()}%</p> : null}                            
+                    </div>
+                    <div className='row'>
+                        <h4>Developer score</h4>
+                        {coin.developer_score ? <p>{coin.developer_score.toLocaleString()}</p> : null}                            
+                    </div>
+                    <div className='row'>
+                        <h4>Liquidity score</h4>
+                        {coin.liquidity_score ? <p>{coin.liquidity_score.toLocaleString()}</p> : null}                            
+                    </div>
+                    <div className='row'>
+                        <h4>Genesis date</h4>
+                        {coin.genesis_date ? <p>{coin.genesis_date.toLocaleString()}</p> : null}                            
+                    </div>
+                    
+                    
 
                 </div>
                 <div className='right'>
@@ -127,8 +146,21 @@ const Coin = () => {
                     </div>
                     <div className='row'>
                         <h4>Circulating Supply</h4>
-                        {coin.market_data ? <p>{coin.market_data.circulating_supply}</p> : null}
+                        {coin.market_data ? <p>{coin.market_data.circulating_supply.toLocaleString()}</p> : null}
                     </div>
+                    <div className='row'>
+                        <h4>Sentiment downvote percentage</h4>
+                        {coin.sentiment_votes_down_percentage ? <p>{coin.sentiment_votes_down_percentage.toLocaleString()}%</p> : null}                            
+                    </div>
+                    <div className='row'>
+                        <h4>Community score</h4>
+                        {coin.community_score ? <p>{coin.community_score.toLocaleString()}</p> : null}                            
+                    </div>
+                    <div className='row'>
+                        <h4>Public interest score</h4>
+                        {coin.public_interest_score ? <p>{coin.public_interest_score.toLocaleString()}</p> : null}                            
+                    </div>
+
 
                 </div>
             </div>

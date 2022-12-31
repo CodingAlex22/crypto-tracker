@@ -28,7 +28,7 @@ useEffect(() => {
 
 
         return (
-            <Link className="carouselItem" to={{ pathname: `${coin.url}`}} target="_blank"> 
+            <Link className="carouselItem" > 
             
             <div class="testing4">
                 <img
@@ -46,6 +46,8 @@ useEffect(() => {
                 </div>    
                 </div>
             </Link>
+
+
         )
     })
 
@@ -63,7 +65,7 @@ useEffect(() => {
         <AliceCarousel 
     mouseTracking
     infinite
-    autoPlayInterval={1000}
+    autoPlayInterval={3500}
     animationDureaction={1500}
     disableDotsControls
     disableButtonsControls

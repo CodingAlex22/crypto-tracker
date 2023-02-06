@@ -20,7 +20,7 @@ the entire historical data for the coin.
 I first created a basic crypto tracker in React that also allows you to see real-time prices as well as a description of the coin with basic data like 24 hour low, Marketcap, Circulating supply etc. Then I added a Lightweight Tradingview
 chart in a form of an Area Series in order to display data. I then added color conditionals into the prices if
 the prices were a win or a loss for the time period they're display at. I then added a carousel in order to display
-top 10 trending coins as well as the 10 ten exchanges to use. 
+top 10 trending coins as well as the top 10 ten exchanges to use. 
 
 ## Optimizations
 

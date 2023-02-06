@@ -34,8 +34,6 @@ have to go on Tradingview to check the indicators for buy and sell signals.
 Tulind.js (NPM package used to calculate indicators) to make accurate Technical Analysis of the markets, I need 
 more candlebar data. Might probably be possible in the near future but for now, an Area Series will do.
 
-Also 
-
 ## Lessons Learned:
 
 Creating this app made me realize what a blessing React is really is as a language. Despite the stereotypes of it being a headache,

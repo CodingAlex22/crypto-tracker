@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+[Xcoin]: https://crypto-tracker-4922.onrender.com/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Xcoin
 
-## Available Scripts
+Xcoin is a crypto tracker website influenced by Coinmarketcap in order to show you real time cryptocurrency prices using Coingecko's API
 
-In the project directory, you can run:
+**Link to project:** https://crypto-tracker-4922.onrender.com/
 
-### `npm start`
+<img src="https://i.ibb.co/mNg83qw/ezgif-4-8ece80c788.gif" height="80%" />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Usage
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Click on any coin on the front page in order to see cryptocurrency data. You can also interact with the Area series graph. The Area series graph shows
+the entire historical data for the coin.
 
-### `npm test`
+## How It's Made:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Tech used:** React, Javascript, Node.Js, Express
 
-### `npm run build`
+I first created a basic crypto tracker in React that also allows you to see real-time prices as well as a description of the coin with basic data like 24 hour low, Marketcap, Circulating supply etc. Then I added a Lightweight Tradingview
+chart in a form of an Area Series in order to display data. I then added color conditionals into the prices if
+the prices were a win or a loss for the time period they're display at. I then added a carousel in order to display
+top 10 trending coins as well as the 10 ten exchanges to use. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Optimizations
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+My original intention was to create an APP in ADDITION to it being able to display OHLC data and technical analysis.
+Coinmarketcap and Coingecko are great websites but the inherent flaw is that there is too much noise which can cause
+analysis paralysis. My  ideal app aimed to simplify it better by only displaying the type of data you really need in addition to OHLC
+data so you could see TA data in real time and know if it's the right time to buy. You often have to click on a coin on Coinmarket cap and then
+have to go on Tradingview to check the indicators for buy and sell signals. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+...but unfortunately, CoinGecko API OHLC data is severly limited by a couple of dozen or so candle bars. In order for
+Tulind.js (NPM package used to calculate indicators) to make accurate Technical Analysis of the markets, I need 
+more candlebar data. Might probably be possible in the near future but for now, an Area Series will do.
 
-### `npm run eject`
+## Lessons Learned:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Creating this app made me realize what a blessing React is really is as a language. Despite the stereotypes of it being a headache,
+I found a lot more potential creating this app on React that I did with just vanilla Javascript. Although it did make some aspects
+easier, like displaying real-time data, it also came with it's own set of problems. One of those was figuring out how to make
+the Tradingview chart responsive but I managed to overcome it.

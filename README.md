@@ -27,8 +27,7 @@ top 10 trending coins as well as the top 10 ten exchanges to use.
 My original intention was to have the Tradingview graph display OHLC data and technical analysis.
 Coinmarketcap and Coingecko are great websites but the inherent flaw is that there is too much noise which can cause
 analysis paralysis. My  ideal app aimed to simplify it better by only displaying the type of data you really need in addition to OHLC
-data so you could see TA data in real time and know if it's the right time to buy. You often have to click on a coin on Coinmarket cap and then
-have to go on Tradingview to check the indicators for buy and sell signals. 
+data so you could see TA data in real time and know if it's the right time to buy. 
 
 ...but unfortunately, CoinGecko API OHLC data is severly limited by a couple of dozen or so candle bars. In order for
 Tulind.js (NPM package used to calculate indicators) to make accurate Technical Analysis of the markets, I need 

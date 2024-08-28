@@ -10,7 +10,7 @@ function Chart() {
   const chart = React.useRef();
  
   const getData = async () => {
-    const resp = await fetch(`https://busy-tan-pike-slip.cyclic.app/${params.coinId}/max`);
+    const resp = await fetch(`https://coingecko-proxy-server2-1.onrender.com/${params.coinId}/365`);
     const data = await resp.json();
     return data;
   }

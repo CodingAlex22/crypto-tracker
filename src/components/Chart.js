@@ -10,7 +10,7 @@ function Chart() {
   const chart = React.useRef();
  
   const getData = async () => {
-    const resp = await fetch(`https://https://test-proxy-1ynu.onrender.com/${params.coinId}/365`);
+    const resp = await fetch(`https://test-proxy-1ynu.onrender.com/${params.coinId}/365`);
     const data = await resp.json();
     return data;
   }

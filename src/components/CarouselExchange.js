@@ -12,7 +12,7 @@ const CarouselExchange = () => {
     const [trending, setTrending] = useState([]);
   
     const fetchTrendingCoins = async () => {
-      const { data } = await axios.get(`https://api.coingecko.com/api/v3/exchanges?per_page=10&page=1`);
+      const { data } = await axios.get(`https://exchange-3pou.onrender.com/api/coins`);
   
       console.log(data);
       setTrending(data);
